@@ -1,0 +1,11 @@
+﻿@using NancyPerformanceTest
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NancyPerformanceTest.ViewModel>
+
+<ul>
+    @foreach (var submodel in @Model.SubModels)
+    {
+        @foreach (var item in submodel.Items) {
+             <li>@item.Name</li>
+         }
+    }
+</ul>

@@ -1,0 +1,9 @@
+﻿@using NancyPerformanceTest
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NancyPerformanceTest.ViewModel>
+
+<ul>
+    @foreach (var submodel in @Model.SubModels)
+    {
+        @Html.Partial("SubPartial", submodel);
+    }
+</ul>
